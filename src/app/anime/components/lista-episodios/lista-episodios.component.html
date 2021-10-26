@@ -1,13 +1,17 @@
-<h1>Lista de episodios</h1>
+<div class="container" *ngIf="(anime$ | async) as anime">
 
-<IFRAME id="streamSB" SRC="https://embedsb.com/e/zem989w6glqw.html" FRAMEBORDER=0 
-            MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO WIDTH=640 HEIGHT=360 
-                allowfullscreen></IFRAME>
+    
 
-<iframe id="mega" width="640" height="360" frameborder="0" 
-        src="https://mega.nz/embed/YJwGDbJD#E9cVCSbgUcmNRvAO4xKMwZqw_bv_aOJ5Q5Pb27QoAf4" 
-            allowfullscreen ></iframe>
+    <h1>{{anime.name}}</h1>
 
-<iframe id="streamtape" src="https://streamtape.com/e/GXZrKaDYW4s1XMP/" width="640" height="360" 
-            allowfullscreen allow="autoplay" 
-                scrolling="no" frameborder="0"></iframe>
+    <ul>
+        <li *ngFor="let episodio of anime.episodios">
+            <a routerLink="{{episodio.number}}" routerLinkActive="activebutton">{{episodio.name}}</a>
+        </li>
+    </ul>
+
+
+</div>
+
+
+

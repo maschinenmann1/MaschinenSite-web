@@ -1,7 +1,7 @@
 <div class="container">
     <h1>Lista de Animes</h1>
     <div class="row">
-        <app-anime class="col-6 col-lg-4" *ngFor="let anime of animeList$ | async" [id]="anime.id"></app-anime>
+        <app-anime class="col-6 col-lg-4" *ngFor="let anime of animesPerPage$ | async" [id]="anime.id"></app-anime>
     </div>
 
 

@@ -1,1 +1,9 @@
-<p>episodio works!</p>
+<div class="container" *ngIf="(episodio$ | async) as episodio">
+
+    <h1>{{episodio.name}}</h1>
+
+    <iframe width="640" height="360" frameborder="0" 
+                [src]="getSanitizer.bypassSecurityTrustResourceUrl(episodio.url[2])"
+                    allowfullscreen ></iframe>
+</div>
+

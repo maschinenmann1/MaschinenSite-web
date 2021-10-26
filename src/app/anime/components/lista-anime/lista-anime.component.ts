@@ -15,7 +15,7 @@ export class ListaAnimeComponent implements OnInit {
 
   public animeList$: Observable<Anime[]>;
   public animesPerPage$: Observable<Anime[]>;
-  public itemsPerPage = 9;
+  public itemsPerPage = 6;
 
   constructor(private animSvc: AnimesService) {
     
@@ -40,8 +40,8 @@ export class ListaAnimeComponent implements OnInit {
   pageChanged(event: PageChangedEvent): void {
     window.scrollTo( 0, 0 );
     const startItem = (event.page - 1) * event.itemsPerPage;
-    const endItem = event.page * event.itemsPerPage;
-    this.animesPerPage$=this.animeList$.pipe(map(items=>items.slice(startItem, endItem)));
+    const endAnime = event.page * event.itemsPerPage;
+    this.animesPerPage$=this.animeList$.pipe(map(items=>items.slice(startItem, endAnime)));
   }
 
 }

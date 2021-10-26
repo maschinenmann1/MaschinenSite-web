@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ListaAnimeComponent } from './components';
-import { ListaEpisodiosComponent } from './components';
+import { ListaAnimeComponent, ListaEpisodiosComponent, EpisodioComponent } from './components';
+
 
 const routes: Routes = [
   {
@@ -10,9 +10,13 @@ const routes: Routes = [
     component: ListaAnimeComponent
   },
   {
-    path:'list', 
+    path:':id', 
     component: ListaEpisodiosComponent
   },
+  {
+    path:':id/:num', 
+    component: EpisodioComponent
+  }
 ];
 
 @NgModule({

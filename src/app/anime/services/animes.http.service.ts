@@ -30,6 +30,11 @@ export class AnimesService {
     return this.loadAnimes().pipe(map(animes => animes.find(a => a.id === id)));
   }
 
+  public loadEpisode(numEmp:number, id: number) {
+    return  this.loadAnimes().pipe(map(animes => animes.find(a => a.id === id)))
+                              .pipe(map(anime => anime.episodios.find(e => e.number === numEmp)));;
+  }
+
   public deleteAnime(id: number) {
     return this.http.delete(this.API_URL + `/${id}`);
   }
