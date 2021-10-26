@@ -1,0 +1,18 @@
+figure{
+    overflow: hidden;
+    display: block;
+}
+
+img {
+    filter: grayscale(10%);
+    z-index: 0;
+}
+
+.zoom {
+    transition: transform .2s; 
+}
+ 
+.zoom:hover {
+    transform: scale(1.1);
+    filter: blur(1px);
+}

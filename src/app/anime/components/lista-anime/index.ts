@@ -1,0 +1,1 @@
+export { ListaAnimeComponent } from './lista-anime.component';

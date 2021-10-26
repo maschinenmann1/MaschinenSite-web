@@ -1,0 +1,8 @@
+<figure *ngIf="(anime$ | async) as anime" class="card" style="overflow: hidden;">
+    <a routerLink="list" routerLinkActive="activebutton">
+        <img [src]="anime.imgSrc" class="card-img zoom" [alt]="anime.name">
+        <div class="card-img-overlay">
+            <figcaption class="text-white"><b>{{anime.name}}</b></figcaption>
+        </div>
+    </a>
+</figure>

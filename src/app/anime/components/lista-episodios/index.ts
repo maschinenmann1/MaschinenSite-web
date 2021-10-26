@@ -1,0 +1,1 @@
+export { ListaEpisodiosComponent } from './lista-episodios.component';
